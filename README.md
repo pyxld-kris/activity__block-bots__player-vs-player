@@ -16,6 +16,6 @@ Program your Block Bot to defeat your opponent!
 
 Use the "Activity Documentation" button to read more about all the different ways you can control your bot!
 
-Open the "modify.mjs" file to begin
+Put one player's bot code in bot1.mjs, and another player's in bot2.mjs to have them battle!
 
 ---
