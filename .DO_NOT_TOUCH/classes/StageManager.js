@@ -97,32 +97,13 @@ export default class StageManager {
       for (let i = 0; i < this.botEntities.length; i++) {
         let bot = this.botEntities[i];
         if (bot.getScore() >= 3) {
-          // This is a really bad way to check which player is which
-          // (We're just assuming list order)
-          if (i == 0) {
-            // Player won
-            if (this.stageNum >= stageConfigs.length) {
-              // Won the whole game
-              new CenteredTimedText(
-                this.scene,
-                "You Win!!!!!",
-                {},
-                9999999999,
-                () => {}
-              );
-            } else {
-              this.nextStage();
-            }
-          } else {
-            // Computer won
-            new CenteredTimedText(
-              this.scene,
-              "Your Bot\nWas Defeated!",
-              {},
-              2000,
-              () => {}
-            );
-          }
+          new CenteredTimedText(
+            this.scene,
+            bot.name + " Wins!",
+            {},
+            5000,
+            () => {}
+          );
 
           this.resetAllBots();
           this.updateDisplay();
